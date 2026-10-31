@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Easy Insurance</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+
+        <div class="logo">
+            EASY INSURANCE
+        </div>
+
+        <div class="nav-links">
+            <a href="{{ url_for('home') }}">Home</a>
+            <a href="{{ url_for('login') }}">Login</a>
+            <a href="{{ url_for('signup') }}">Sign Up</a>
+        </div>
+
+    </nav>
+
+
+    <!-- Hero Section -->
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <h1>
+                Predict Your
+                <span>Insurance Cost</span>
+                Easily
+            </h1>
+
+            <p>
+                Easy Insurance uses machine learning to estimate
+                your insurance charges based on your personal,
+                financial, and lifestyle information.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="{{ url_for('login') }}"
+                   class="btn primary-btn">
+                    Get Started
+                </a>
+
+                <a href="{{ url_for('signup') }}"
+                   class="btn secondary-btn">
+                    Create Account
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="hero-card">
+
+            <div class="card-icon">
+                💰
+            </div>
+
+            <h2>
+                Insurance Prediction
+            </h2>
+
+            <p>
+                Get an estimated insurance price
+                in just a few seconds.
+            </p>
+
+            <div class="prediction-example">
+
+                <span>Estimated Charges</span>
+
+                <strong>
+                    ₹ 24,580
+                </strong>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Features Section -->
+
+    <section class="features">
+
+        <h2>
+            Why Choose Easy Insurance?
+        </h2>
+
+        <p class="section-description">
+            Simple, fast and intelligent insurance prediction.
+        </p>
+
+
+        <div class="feature-container">
+
+            <div class="feature-card">
+
+                <div class="feature-icon">
+                    🤖
+                </div>
+
+                <h3>
+                    Machine Learning
+                </h3>
+
+                <p>
+                    Our machine learning model analyzes
+                    your information to estimate insurance charges.
+                </p>
+
+            </div>
+
+
+            <div class="feature-card">
+
+                <div class="feature-icon">
+                    ⚡
+                </div>
+
+                <h3>
+                    Fast Prediction
+                </h3>
+
+                <p>
+                    Enter your details and receive
+                    your estimated insurance cost quickly.
+                </p>
+
+            </div>
+
+
+            <div class="feature-card">
+
+                <div class="feature-icon">
+                    🔐
+                </div>
+
+                <h3>
+                    Secure Account
+                </h3>
+
+                <p>
+                    Your account is protected with
+                    secure password authentication.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <p>
+            © 2026 Easy Insurance | Insurance Prediction System
+        </p>
+
+    </footer>
+
+</body>
+</html>

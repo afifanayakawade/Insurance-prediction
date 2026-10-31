@@ -1,0 +1,35 @@
+<nav class="navbar">
+
+    <div class="logo">
+        EASY INSURANCE
+    </div>
+
+    <div class="nav-links">
+
+        <a href="{{ url_for('home') }}">Home</a>
+
+        <a href="{{ url_for('features') }}">Features</a>
+
+        <a href="{{ url_for('about') }}">About Us</a>
+
+        {% if current_user.is_authenticated %}
+
+            <a href="{{ url_for('dashboard') }}">Dashboard</a>
+
+            <a href="{{ url_for('predict') }}">Predict</a>
+
+            <a href="{{ url_for('history') }}">History</a>
+
+            <a href="{{ url_for('logout') }}">Logout</a>
+
+        {% else %}
+
+            <a href="{{ url_for('login') }}">Login</a>
+
+            <a href="{{ url_for('signup') }}">Sign Up</a>
+
+        {% endif %}
+
+    </div>
+
+</nav>

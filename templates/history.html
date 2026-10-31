@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Prediction History</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Prediction History</h1>
+
+        <p>
+            Welcome, {{ current_user.name }}
+        </p>
+
+        <a href="{{ url_for('dashboard') }}">
+            ← Back to Dashboard
+        </a>
+
+        <br><br>
+
+        {% if predictions %}
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>Date</th>
+                    <th>Age</th>
+                    <th>Sex</th>
+                    <th>BMI</th>
+                    <th>Dependents</th>
+                    <th>Smoker</th>
+                    <th>Salary</th>
+                    <th>Expenditure</th>
+                    <th>Occupation</th>
+                    <th>Chronic Disease</th>
+                    <th>Alcoholic</th>
+                    <th>Marital Status</th>
+                    <th>Predicted Charges</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                {% for prediction in predictions %}
+
+                <tr>
+
+                    <td>
+                        {{ prediction.created_at.strftime('%d-%m-%Y %H:%M') }}
+                    </td>
+
+                    <td>
+                        {{ prediction.age }}
+                    </td>
+
+                    <td>
+                        {{ prediction.sex }}
+                    </td>
+
+                    <td>
+                        {{ prediction.bmi }}
+                    </td>
+
+                    <td>
+                        {{ prediction.dependents }}
+                    </td>
+
+                    <td>
+                        {{ prediction.smoker }}
+                    </td>
+
+                    <td>
+                        ₹{{ "{:,.2f}".format(prediction.salary) }}
+                    </td>
+
+                    <td>
+                        ₹{{ "{:,.2f}".format(prediction.expenditure) }}
+                    </td>
+
+                    <td>
+                        {{ prediction.occupation }}
+                    </td>
+
+                    <td>
+                        {{ prediction.chronic_diseases }}
+                    </td>
+
+                    <td>
+                        {{ prediction.alcoholic }}
+                    </td>
+
+                    <td>
+                        {{ prediction.marital_status }}
+                    </td>
+
+                    <td>
+                        <strong>
+                            ₹{{ "{:,.2f}".format(prediction.predicted_charges) }}
+                        </strong>
+                    </td>
+
+                </tr>
+
+                {% endfor %}
+
+            </tbody>
+
+        </table>
+
+        {% else %}
+
+        <div class="empty-history">
+
+            <h2>No Predictions Yet</h2>
+
+            <p>
+                You haven't made any insurance predictions yet.
+            </p>
+
+            <a href="{{ url_for('predict') }}">
+                Make Your First Prediction
+            </a>
+
+        </div>
+
+        {% endif %}
+
+    </div>
+
+</body>
+
+</html>

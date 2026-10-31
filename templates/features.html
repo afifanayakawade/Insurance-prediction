@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Features - Easy Insurance</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+{% include 'navbar.html' %}
+
+<section class="page-section">
+
+    <h1>Our Features</h1>
+
+    <p class="page-intro">
+        Easy Insurance provides a simple and intelligent
+        platform for estimating insurance charges.
+    </p>
+
+    <div class="feature-container">
+
+        <div class="feature-card">
+            <div class="feature-icon">🤖</div>
+            <h3>Machine Learning Prediction</h3>
+            <p>
+                Our machine learning model estimates
+                insurance charges using user information
+                and lifestyle factors.
+            </p>
+        </div>
+
+        <div class="feature-card">
+            <div class="feature-icon">⚡</div>
+            <h3>Fast Prediction</h3>
+            <p>
+                Get an estimated insurance charge
+                within seconds after entering your details.
+            </p>
+        </div>
+
+        <div class="feature-card">
+            <div class="feature-icon">🔐</div>
+            <h3>Secure Login</h3>
+            <p>
+                User accounts are protected using
+                password hashing and authentication.
+            </p>
+        </div>
+
+        <div class="feature-card">
+            <div class="feature-icon">🗄️</div>
+            <h3>PostgreSQL Database</h3>
+            <p>
+                User information and prediction records
+                are stored using PostgreSQL.
+            </p>
+        </div>
+
+        <div class="feature-card">
+            <div class="feature-icon">📊</div>
+            <h3>Prediction History</h3>
+            <p>
+                Users can view their previous insurance
+                predictions whenever required.
+            </p>
+        </div>
+
+        <div class="feature-card">
+            <div class="feature-icon">📱</div>
+            <h3>User Friendly Interface</h3>
+            <p>
+                A clean HTML, CSS and JavaScript interface
+                makes the application easy to use.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+</body>
+</html>
